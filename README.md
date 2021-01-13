@@ -3,16 +3,20 @@
 I recently purchased the [Udemy Mastering Ansible Course](https://www.udemy.com/mastering-ansible/learn/v4/). The course instructor mentions that he is using a Docker environment for the exercises, however I wasn't able to find a copy of this configuration to use. While there is a [Vagrant](https://www.vagrantup.com) file provided, I'd prefer not to install [VMware Fusion](https://www.vmware.com/products/fusion.html) or [VirtualBox](https://www.virtualbox.org) if I can avoid it and already have [Docker for macOS](https://www.docker.com/docker-mac) installed.
 
 ## Course Topology
+
 The topology of the course, provided by the instructor, is included in the [Topology.pdf](Topology.pdf) file within this repository.
 
 ## Requirements
+
 To make use of this repository you'll need the following software.
+
 - macOS 10.13.5
 - [Docker for macOS 18.05+](https://www.docker.com/docker-mac)
 
 **Note:** I have only tested this on the Mac, but believe it should also work on a Linux system. For my Windows friends you may need to make modifications to the Dockerfile in the control and base directories. I don't have access to a Windows system to test.
 
 ## Getting Started
+
 1. [Clone the repository](https://help.github.com/articles/cloning-a-repository/) to your machine
 2. Install [Docker for macOS](https://www.docker.com/docker-mac), if you haven't already
 3. Start Docker for macOS so that it is running
@@ -34,17 +38,22 @@ To make use of this repository you'll need the following software.
 ## Commands
 
 ### Startup the Environment
+
 `docker-compose up --build -d`
 
 ### Connect to the Environment
+
 `docker container exec -it udemy-mastering-ansible_control_1 bash`
 
 ### Shutdown The Environment
+
 `docker-compose down --remove-orphan`
 
 ### Update to latest project version
+
 `git pull`
 **Note:** This should not change any of your files in the ansible/ directory within your clone of this project.
 
 ## Bugs, Corrections or Enhancements
+
 If you find a bug, something that needs to be corrected, or a possible enhancement, please [create an issue](https://help.github.com/articles/creating-an-issue/) or better yet submit the fix through a [Pull Request](https://help.github.com/articles/about-pull-requests/).
