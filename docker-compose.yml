@@ -3,6 +3,9 @@ version: '3.6'
 services:
   control:
     build: ./control
+    stdin_open: true
+    tty: true
+
     volumes:
       - type: bind
         source: ./ansible
